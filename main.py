@@ -20,7 +20,7 @@ async def oggiclemmy(interaction: discord.Interaction):
     tz = pytz.timezone('Europe/Rome')
     oggi = datetime.now(tz).weekday()
     giorni_si = [0, 3, 5] # 0=Lun, 3=Gio, 5=Sab
-    risposta = "Sì" if oggi in giorni_si else "No"
+    risposta = "Sì, è  casa GOGOGO" if oggi in giorni_si else "No, oggi si lavora e si fattura"
     await interaction.response.send_message(risposta)
 
 token = os.getenv("DISCORD_TOKEN")
